@@ -20,3 +20,10 @@ spec:
            value: "TRUE"
          ports:
          - containerPort: 25565
+         volumeMounts:
+         - name: data-vol
+           mountPath: /data
+       volumes:
+       - name: data-vol
+         persistentVolumeClaim:
+           claimName: minecraft-data
