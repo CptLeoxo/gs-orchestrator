@@ -7,16 +7,16 @@ spec:
   selector:
     matchLabels:
       app: minecraft
-    template:
-      metadata:
-        labels:
-          app: minecraft
-      spec:
-        containers:
-        - name: minecraft
-          image: itzg/minecraft-server
-          env:
-          - name: EULA
-            value: "TRUE"
-          ports:
-          - containerPort: 25565
+  template:
+     metadata:
+       labels:
+         app: minecraft
+     spec:
+       containers:
+       - name: minecraft
+         image: itzg/minecraft-server
+         env:
+         - name: EULA
+           value: "TRUE"
+         ports:
+         - containerPort: 25565
